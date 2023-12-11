@@ -7,13 +7,13 @@ from ui import UI
 class Game:
 	def __init__(self):
 
-		# game attributes
+		# all game attributes
 		self.max_level = 2
 		self.max_health = 100
 		self.cur_health = 100
 		self.coins = 0
 		
-		# audio 
+		# audio sets
 		self.level_bg_music = pygame.mixer.Sound('audio/level_music.wav')
 		self.overworld_bg_music = pygame.mixer.Sound('audio/overworld_music.wav')
 
@@ -22,7 +22,7 @@ class Game:
 		self.status = 'overworld'
 		self.overworld_bg_music.play(loops = -1)
 
-		# user interface 
+		# user interface enable
 		self.ui = UI(screen)
 
 
@@ -65,7 +65,7 @@ class Game:
 			self.ui.show_coins(self.coins)
 			self.check_game_over()
 
-# Pygame setup
+# Pygame setup init
 pygame.init()
 screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
